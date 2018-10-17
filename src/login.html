@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./static/css/login.css" />
+</head>
+<body>
+    <div class="container" id="particles">
+        <div class="content fadeIn animated">
+            <div id="info_form" class="smart-form client-form">
+                <div class="content__main">
+                    <div class="onepxAfter pr">
+                        <span class="icon_wrap"><img src="./static/css/user.jpg" width="30"></span>
+                        <input type="text" name="username" class="content__input" id="login_username" value="" placeholder="用户名">
+                    </div>
+                    <div class="onepxAfter pr">
+                        <span class="icon_wrap"><img src="./static/css/password.jpg" width="30"></span>
+                        <input type="password" name="password" class="content__input" id="login_password" value="" placeholder="密码">
+                    </div>
+                </div>
+                <button class="button button--moema button--size-l" id="logsubmit">登 录</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="./static/lib/utils.js"></script>
+<script type="text/javascript">
+
+window.onload = function() {
+    var logsubmit = document.querySelector('#logsubmit');
+
+    function submitInfo() {
+        var username = document.querySelector('#login_username').value;
+        var password = document.querySelector('#login_password').value;
+
+        if (!username) {
+            alert('用户名不能为空');
+        } else if (!password) {
+            alert('密码不能为空');
+        } else {
+            Ajax('post', '/doLogin', {
+                name: username,
+                password: password
+            }, (data) => {
+                data = JSON.parse(data);
+                if (data.code == 1) {
+                    localStorage.setItem('token', data.data.token);
+                    localStorage.setItem('username', data.data.name);
+                    location.href = "/";
+                } else {
+                    alert(data.msg);
+                }
+            }, (error) => {
+                console.log(error);
+            });
+        }
+    }
+
+    logsubmit.onclick = function(event) {
+        submitInfo();
+    };
+
+
+    var  login_username = document.querySelector('#login_username');
+    var  login_password = document.querySelector('#login_password');
+    login_username.onkeyup = function(event) {
+        if (event.keyCode == 13) {
+            submitInfo();
+        }
+    };
+
+    login_password.onkeyup = function(event) {
+        if (event.keyCode == 13) {
+            submitInfo();
+        }
+    };
+};  
+</script>

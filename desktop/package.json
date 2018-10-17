@@ -1,0 +1,31 @@
+{
+  "name": "todos",
+  "version": "1.0.0",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "npm-run-all package:*",
+    "package:win": "electron-packager . todos --overwrite  --platform=win32 --arch=x64 --out=out --version 1.0.0 --icon=./images/logo.ico",
+    "package:mac": "electron-packager . todos --platform=darwin --arch=x64 --icon=./images/logo.ico --out=mac --asar --app-version=1.0.0",
+    "pub:win": "node install.js",
+    "pub:mac": "node max_install.js"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "dependencies": {
+    "electron": "^1.7.14"
+  },
+  "devDependencies": {
+    "electron-installer-dmg": "^2.0.0",
+    "electron-winstaller": "^2.6.4"
+  }
+}

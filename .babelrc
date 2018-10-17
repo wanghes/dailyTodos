@@ -1,0 +1,4 @@
+{
+  "presets": ["react", "env", "stage-0"],   // 从右向左解析
+  "plugins": ["transform-runtime"], // 这个是支持async await的
+}
