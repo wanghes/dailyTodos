@@ -4,5 +4,5 @@ dist
 desktop/node_modules
 desktop/mac
 desktop/mac_release
-desktop/out
+desktop/win_release
 desktop/win
