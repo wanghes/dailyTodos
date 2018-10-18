@@ -1,6 +1,4 @@
 import  React from "react";
-import  ReactDOM from "react-dom";
-
 
 class Side extends React.Component {
     constructor(props) {
@@ -40,7 +38,4 @@ class Side extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Side />,
-    document.getElementById('operater')
-);
+export default Side;

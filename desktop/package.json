@@ -9,7 +9,7 @@
     "package:win": "electron-packager . todos --overwrite  --platform=win32 --arch=x64 --out=out --version 1.0.0 --icon=./images/logo.ico",
     "package:mac": "electron-packager . todos --platform=darwin --arch=x64 --icon=./images/logo.ico --out=mac --asar --app-version=1.0.0",
     "pub:win": "node install.js",
-    "pub:mac": "node max_install.js"
+    "pub:mac": "node mac_install.js"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [

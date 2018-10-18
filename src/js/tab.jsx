@@ -1,5 +1,4 @@
 import  React from "react";
-import  ReactDOM from "react-dom";
 
 class Tab extends React.Component {
     constructor(props) {
@@ -40,7 +39,4 @@ class Tab extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <Tab />,
-    document.getElementById('tabBox')
-)
+export default Tab;

@@ -1,5 +1,4 @@
 import  React from "react";
-import  ReactDOM from "react-dom";
 import  { ContextMenu, MenuItem } from './components/context-menu'
 
 class Menu extends React.Component {
@@ -207,8 +206,4 @@ class Todos extends React.Component {
     }
 }
 
-
-ReactDOM.render(
-    <Todos />,
-    document.getElementById('todos_con')
-);
+export default Todos;

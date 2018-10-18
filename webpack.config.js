@@ -24,10 +24,10 @@ if (process.env.type == 'build') { // 判断package.json里面是build还是dev�
 
 module.exports = {
     entry:{
-        main: './src/js/main.js',
-        add: './src/js/add.js',
-        side: './src/js/side.js',
-        tab: './src/js/tab.js'
+        main: './src/js/main.jsx',
+        // add: './src/js/add.js',
+        // side: './src/js/side.js',
+        // tab: './src/js/tab.js'
     },
     output: {
     	filename: '[name].[chunkhash:6].js',

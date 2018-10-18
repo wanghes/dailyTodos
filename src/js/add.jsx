@@ -1,6 +1,4 @@
 import  React from "react";
-import  ReactDOM from "react-dom";
-
 import Toast from "./components/Toast";
 
 class FormCon extends React.Component {
@@ -166,7 +164,4 @@ class FormCon extends React.Component {
     }
 }
 
-ReactDOM.render(
-    <FormCon />,
-    document.getElementById('addPost')
-);
+export default FormCon;
