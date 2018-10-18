@@ -7,7 +7,7 @@
     "start": "electron .",
     "package": "npm-run-all package:*",
     "package:win": "electron-packager . todos --overwrite  --platform=win32 --arch=x64 --out=out --version 1.0.0 --icon=./images/logo.ico",
-    "package:mac": "electron-packager . todos --platform=darwin --arch=x64 --icon=./images/logo.ico --out=mac --asar --app-version=1.0.0",
+    "package:mac": "electron-packager . todos --platform=darwin --arch=x64 --icon=./images/logo.icns --out=mac --asar --app-version=1.0.0",
     "pub:win": "node install.js",
     "pub:mac": "node mac_install.js"
   },
@@ -22,7 +22,8 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "dependencies": {
-    "electron": "^1.7.14"
+    "electron": "^2.0.11",
+    "electron-packager": "^12.2.0"
   },
   "devDependencies": {
     "electron-installer-dmg": "^2.0.0",
