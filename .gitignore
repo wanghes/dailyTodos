@@ -1,6 +1,7 @@
 .idea
 node_modules
 dist
+desktop/dis
 desktop/node_modules
 desktop/mac
 desktop/mac_release
