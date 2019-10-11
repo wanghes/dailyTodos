@@ -1,7 +1,7 @@
 function Ajax(type, url, data, success, failed){
     let host = '';
     if (location.host.indexOf('localhost') > -1 || location.host.indexOf('localhost') > -1 || location.host.indexOf('10.201.0.241') > -1) {
-        host = "http://todo.com"
+        host = "http://todo.mousecloud.cn"
     } else {
         host = "http://todo.mousecloud.cn"
     }
